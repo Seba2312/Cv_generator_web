@@ -21,12 +21,15 @@ const CVContext = createContext<CVContextType | undefined>(undefined);
 
 const LOCAL_STORAGE_KEY = 'cv_generator_data';
 
+// Injected by Vite
+declare const __GOOGLE_SHEET_URL__: string;
+
 export const CVProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [profile, setProfileState] = useState<CVProfile>(initialProfile);
     const [activeTemplate, setActiveTemplate] = useState<'classic' | 'modern' | 'classic2' | 'modern2'>('classic');
     const [settings, setSettingsState] = useState<AppState['settings']>({
         activeTemplate: 'classic',
-        googleSheetUrl: 'https://script.google.com/macros/s/AKfycbwWSidjQXfBQphdlYHsGx6Xa5qesIkO1LkbRi00ULFKyelxiNvL2y1mL2nqdMgrSctR_w/exec'
+        googleSheetUrl: typeof __GOOGLE_SHEET_URL__ !== 'undefined' ? __GOOGLE_SHEET_URL__ : ''
     });
 
     // Helper to migrate legacy string arrays to SkillItem arrays
