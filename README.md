@@ -1,6 +1,16 @@
 # CV Generator
 
+**Live App:** [https://cvgen-32dd9.web.app](https://cvgen-32dd9.web.app)
+
 A React-based CV Generator allowing you to create, edit, and export your CV in multiple templates. It supports local data persistence, JSON export/import, and optional Cloud Sync via Google Sheets.
+
+## Disclaimer & Context
+This was created primarily as a short personal project to handle my own CV data backup and generation needs. It is provided as-is.
+
+**Nutzung auf eigene Gefahr** (Use at your own risk). No guarantees of functionality, maintenance, or support are provided.
+
+## License
+This project is licensed under the terms of the MIT License. You are free to do whatever you want with this code. See the [LICENSE](LICENSE) file for details.
 
 ## Installation & Setup
 
@@ -30,7 +40,7 @@ The application provides three ways to save your data:
 
 #### A. Automatic Local Storage
 - Your changes are automatically saved to your browser's Local Storage as you type.
-- If you refresh the page or close/reopen the tab, your data will persist.
+- If you refresh the page or close/reopen the tab, your data will not persist.
 - **Note**: This is specific to the browser and device you are using.
 
 #### B. JSON File Export (Backup)
@@ -42,7 +52,7 @@ The application provides three ways to save your data:
 - This allows you to sync your CV data to a private Google Sheet.
 - Useful for accessing your CV from different devices or keeping a cloud backup.
 
-### 2. Google Sheets Integration Logic (`mzsheetlink`)
+### 2. Google Sheets Integration Logic (`mysheetlink`)
 The "Web App URL" in Settings connects your frontend to a Google Apps Script hosted on your account.
 
 #### How the Logic Works:
