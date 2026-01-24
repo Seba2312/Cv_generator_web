@@ -1,0 +1,138 @@
+.cvPage {
+    max-width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #1a202c;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profileImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.headerContent {
+    flex: 1;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    flex: 1;
+}
+
+.mainColumn {
+    padding: 2rem;
+    border-right: 1px solid #e2e8f0;
+}
+
+.sideColumn {
+    padding: 2rem;
+    background: #f7fafc;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #3182ce;
+    padding-left: 0.75rem;
+}
+
+.item {
+    margin-bottom: 2rem;
+}
+
+.itemRole {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1a202c;
+}
+
+.itemOrg {
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.itemDate {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bullet {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.bullet::before {
+    content: "•";
+    color: #3182ce;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.skillTag {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+@media print {
+    @page {
+        margin: 0;
+    }
+
+    .cvPage {
+        box-shadow: none;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+}

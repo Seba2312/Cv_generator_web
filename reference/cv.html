@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV Template</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* ====== CV Base Styles, Screen and Print ====== */
+    .cv-page {
+      max-width: 48rem;
+      background: #ffffff;
+    }
+
+    .cv-inner {
+      padding: 1.5rem 1.75rem;
+    }
+
+    .cv-section {
+      padding-top: 0.5rem;
+    }
+
+    .cv-section-title {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+      color: #374151;
+      font-weight: 500;
+      border-bottom: 1px solid #626262;
+      padding-bottom: 0.25rem;
+    }
+
+    .cv-block {
+      margin-top: 0.5rem;
+    }
+
+    .cv-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .cv-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .cv-heading {
+      font-weight: 600;
+    }
+
+    .cv-sub {
+      font-style: italic;
+      font-size: 12.5px;
+      color: #374151;
+    }
+
+    .cv-role {
+      color: #374151;
+      font-weight: 400;
+    }
+
+    /* Location and dates on the right */
+    .cv-location {
+      text-align: right;
+      font-size: 12.5px;
+      font-style: italic;
+      color: #374151;
+      min-width: fit-content;
+      margin-top: 0.25rem;
+    }
+
+    /* Lists */
+    .cv-list {
+      margin-top: 0rem;
+      padding-left: 1.25rem;
+      font-size: 13px;
+      line-height: 1.25rem;
+      list-style: disc;
+    }
+
+    .cv-item {
+      margin-top: 0rem;
+    }
+
+    /* ====== Print Settings ====== */
+    @media print {
+      @page {
+        size: A4;
+        margin: 7.5mm;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      html,
+      body {
+        background: #ffffff !important;
+      }
+
+      .cv-page {
+        box-shadow: none;
+        padding-right: 1px;
+      }
+    }
+
+    /* Keep colours in print */
+    * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  </style>
+</head>
+
+<body class="bg-neutral-100 text-neutral-900 antialiased print:bg-white">
+  <!-- Toolbar shown on screen only -->
+  <div
+    class="no-print sticky top-0 z-10 flex w-full justify-center bg-neutral-100/80 backdrop-blur-md border-b border-neutral-200">
+    <div class="w-full max-w-3xl px-4 py-2 text-sm text-neutral-700 flex items-center gap-3">
+      <button onclick="window.print()"
+        class="px-3 py-1.5 rounded-lg border border-neutral-300 shadow-sm hover:bg-white">
+        Export PDF
+      </button>
+      <span class="hidden sm:inline">
+        Tip: In the print dialog, enable <em>Background graphics</em>, set
+        <em>Paper size</em> to A4 (or Letter) and turn off
+        <em>Headers & Footers</em>.
+      </span>
+    </div>
+  </div>
+
+  <main class="mx-auto w-full cv-page shadow-sm ring-1 ring-neutral-200 print:shadow-none print:ring-0">
+    <div class="cv-inner print:p-0">
+      <!-- Header -->
+      <header class="text-center">
+        <h1 class="text-3xl font-semibold tracking-tight">Full Name</h1>
+        <p class="mt-0 text-[13px] text-neutral-700">
+          <span>Phone</span>
+          <span class="mx-2">|</span>
+          <span>Email</span>
+        </p>
+      </header>
+
+      <!-- Education -->
+      <section class="cv-section pt-0">
+        <h2 class="cv-section-title">Education</h2>
+        <div class="cv-block space-y-2">
+          <div class="cv-avoid-break">
+            <div class="cv-row">
+              <div>
+                <div class="cv-heading">
+                  University Name
+                  <span class="cv-role"> • Degree and Field</span>
+                </div>
+                <ul class="cv-list">
+                  <li class="cv-item">Achievement, scholarship, GPA, honours</li>
+                </ul>
+              </div>
+              <div class="cv-location">City, Country<br />Start — End</div>
+            </div>
+          </div>
+
+          <div class="cv-avoid-break">
+            <div class="cv-row">
+              <div>
+                <div class="cv-heading">
+                  University Name
+                  <span class="cv-role"> • Exchange or Programme</span>
+                </div>
+                <ul class="cv-list">
+                  <li class="cv-item">Programme details, focus areas</li>
+                </ul>
+              </div>
+              <div class="cv-location">City, Country<br />Start — End</div>
+            </div>
+          </div>
+
+          <div class="cv-avoid-break">
+            <div class="cv-row">
+              <div>
+                <div class="cv-heading">
+                  School Name
+                  <span class="cv-role"> • Secondary School</span>
+                </div>
+                <ul class="cv-list">
+                  <li class="cv-item">Awards, leadership, distinctions</li>
+                </ul>
+              </div>
+              <div class="cv-location">City, Country<br />Start — End</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Work Experience</h2>
+        <div class="cv-block space-y-2">
+          <div class="cv-avoid-break">
+            <div class="cv-row">
+              <div>
+                <div class="cv-heading">
+                  Organisation Name
+                  <span class="cv-role"> • Role Title</span>
+                </div>
+                <ul class="cv-list">
+                  <li class="cv-item">Key responsibility or achievement</li>
+                  <li class="cv-item">Key responsibility or achievement</li>
+                </ul>
+              </div>
+              <div class="cv-location">City, Country<br />Start — End</div>
+            </div>
+          </div>
+
+          <div class="cv-avoid-break">
+            <div class="cv-row">
+              <div>
+                <div class="cv-heading">
+                  Company Name
+                  <span class="cv-role"> • Role Title</span>
+                </div>
+                <ul class="cv-list">
+                  <li class="cv-item">Key responsibility or achievement</li>
+                  <li class="cv-item">Key responsibility or achievement</li>
+                </ul>
+              </div>
+              <div class="cv-location">City, Country<br />Start — End</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Projects</h2>
+        <div class="cv-block space-y-2">
+          <div class="cv-avoid-break">
+            <div class="cv-row">
+              <div>
+                <div class="cv-heading">
+                  Project Name
+                  <span class="cv-role"> • Role and Context</span>
+                </div>
+                <ul class="cv-list">
+                  <li class="cv-item">Project goal and contribution</li>
+                  <li class="cv-item">Methods, technologies, or results</li>
+                </ul>
+              </div>
+              <div class="cv-location">City, Country<br />Start — End</div>
+            </div>
+          </div>
+
+          <div class="cv-avoid-break">
+            <div class="cv-row">
+              <div>
+                <div class="cv-heading">
+                  Project Name
+                  <span class="cv-role"> • Role and Context</span>
+                </div>
+                <ul class="cv-list">
+                  <li class="cv-item">Project goal and contribution</li>
+                </ul>
+              </div>
+              <div class="cv-location">City, Country<br />Start — End</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills and Interests -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Skills & Interests</h2>
+        <div class="cv-block space-y-1 text-[12.5px]">
+          <div class="cv-item">
+            <span class="font-semibold">Languages:</span> Language 1, Language 2, Language 3
+          </div>
+          <div class="cv-item">
+            <span class="font-semibold">Technical:</span> Tool 1, Tool 2, Tool 3, Tool 4
+          </div>
+          <div class="cv-item">
+            <span class="font-semibold">Interests:</span> Interest 1, Interest 2, Interest 3
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

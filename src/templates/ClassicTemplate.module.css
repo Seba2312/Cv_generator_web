@@ -1,0 +1,100 @@
+/* ====== CV Base Styles, Screen and Print ====== */
+.cvPage {
+    max-width: 210mm;
+    /* A4 width */
+    min-height: 297mm;
+    /* A4 height */
+    background: #ffffff;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.cvInner {
+    padding: 1.5rem 1.75rem;
+}
+
+.cvSection {
+    padding-top: 0.5rem;
+}
+
+.cvSectionTitle {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 11px;
+    color: #374151;
+    font-weight: 500;
+    border-bottom: 1px solid #626262;
+    padding-bottom: 0.25rem;
+}
+
+.cvBlock {
+    margin-top: 0.5rem;
+}
+
+.cvRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cvAvoidBreak {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.cvHeading {
+    font-weight: 600;
+}
+
+.cvSub {
+    font-style: italic;
+    font-size: 12.5px;
+    color: #374151;
+}
+
+.cvRole {
+    color: #374151;
+    font-weight: 400;
+}
+
+.cvLocation {
+    text-align: right;
+    font-size: 12.5px;
+    font-style: italic;
+    color: #374151;
+    min-width: fit-content;
+    margin-top: 0.25rem;
+}
+
+.cvList {
+    margin-top: 0rem;
+    padding-left: 1.25rem;
+    font-size: 13px;
+    line-height: 1.25rem;
+    list-style: disc;
+}
+
+.cvItem {
+    margin-top: 0rem;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body {
+        background: #ffffff !important;
+    }
+
+    .cvPage {
+        box-shadow: none;
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        padding: 7.5mm;
+        /* Add margin as padding for print */
+    }
+}

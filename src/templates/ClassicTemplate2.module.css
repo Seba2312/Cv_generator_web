@@ -1,0 +1,97 @@
+.cvPage {
+    max-width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.name {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.contact {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.section {
+    margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.item {
+    margin-bottom: 1rem;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: bold;
+}
+
+.itemRole {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.itemMeta {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.bullets {
+    list-style-type: square;
+    padding-left: 1.25rem;
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.skillsGroup {
+    margin-bottom: 0.5rem;
+}
+
+.skillsLabel {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+@media print {
+    @page {
+        margin: 0;
+    }
+
+    .cvPage {
+        box-shadow: none;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 10mm;
+    }
+}

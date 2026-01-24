@@ -1,0 +1,103 @@
+.cvPage {
+    max-width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.sidebar {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main {
+    padding: 2rem;
+    color: #333;
+}
+
+.profileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 4px solid #fff;
+}
+
+.sidebarSection {
+    margin-bottom: 1.5rem;
+}
+
+.sidebarTitle {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.contactItem {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    word-break: break-all;
+}
+
+.skillItem {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0.25rem;
+    font-size: 0.85rem;
+}
+
+.mainTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2e3b4e;
+    line-height: 1.2;
+}
+
+.mainSubtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.sectionTitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #2e3b4e;
+    font-weight: 600;
+    border-bottom: 2px solid #2e3b4e;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    .cvPage {
+        box-shadow: none;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
