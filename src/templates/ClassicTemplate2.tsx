@@ -14,8 +14,24 @@ const ClassicTemplate2: React.FC = () => {
                     <span>{personalInfo.email}</span>
                     {personalInfo.phone && <span> • {personalInfo.phone}</span>}
                     {personalInfo.location && <span> • {personalInfo.location}</span>}
-                    {personalInfo.linkedin && <span> • {personalInfo.linkedin}</span>}
-                    {personalInfo.website && <span> • {personalInfo.website}</span>}
+                    {personalInfo.linkedin && (
+                        <span> • <a
+                            href={personalInfo.linkedin.startsWith('http') ? personalInfo.linkedin : `https://${personalInfo.linkedin}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                        >
+                            LinkedIn
+                        </a></span>
+                    )}
+                    {personalInfo.website && <span> • <a
+                        href={personalInfo.website.startsWith('http') ? personalInfo.website : `https://${personalInfo.website}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                    >
+                        {personalInfo.website.toLowerCase().includes('github.com') ? 'GitHub' : 'Website'}
+                    </a></span>}
                 </div>
             </header>
 

@@ -19,8 +19,30 @@ const ModernTemplate: React.FC = () => {
                     <div className={styles.contactItem}>{personalInfo.email}</div>
                     <div className={styles.contactItem}>{personalInfo.phone}</div>
                     {personalInfo.location && <div className={styles.contactItem}>{personalInfo.location}</div>}
-                    {personalInfo.website && <div className={styles.contactItem}>{personalInfo.website}</div>}
-                    {personalInfo.linkedin && <div className={styles.contactItem}>{personalInfo.linkedin}</div>}
+                    {personalInfo.website && (
+                        <div className={styles.contactItem}>
+                            <a
+                                href={personalInfo.website.startsWith('http') ? personalInfo.website : `https://${personalInfo.website}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:underline"
+                            >
+                                {personalInfo.website.toLowerCase().includes('github.com') ? 'GitHub' : 'Website'}
+                            </a>
+                        </div>
+                    )}
+                    {personalInfo.linkedin && (
+                        <div className={styles.contactItem}>
+                            <a
+                                href={personalInfo.linkedin.startsWith('http') ? personalInfo.linkedin : `https://${personalInfo.linkedin}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:underline"
+                            >
+                                LinkedIn
+                            </a>
+                        </div>
+                    )}
                 </div>
 
                 <div className={styles.sidebarSection}>

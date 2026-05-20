@@ -25,13 +25,27 @@ const ClassicTemplate: React.FC = () => {
                         {personalInfo.linkedin && (
                             <>
                                 <span className="mx-2">|</span>
-                                <span>{personalInfo.linkedin}</span>
+                                <a
+                                    href={personalInfo.linkedin.startsWith('http') ? personalInfo.linkedin : `https://${personalInfo.linkedin}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:underline"
+                                >
+                                    LinkedIn
+                                </a>
                             </>
                         )}
                         {personalInfo.website && (
                             <>
                                 <span className="mx-2">|</span>
-                                <span>{personalInfo.website}</span>
+                                <a
+                                    href={personalInfo.website.startsWith('http') ? personalInfo.website : `https://${personalInfo.website}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:underline"
+                                >
+                                    {personalInfo.website.toLowerCase().includes('github.com') ? 'GitHub' : 'Website'}
+                                </a>
                             </>
                         )}
                     </p>
